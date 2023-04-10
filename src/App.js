@@ -13,11 +13,15 @@ import {
 // Components
 import RootLayout from './layouts/RootLayout';
 import Home from './pages/Home';
+import Error from './pages/Error';
+import GalleryView from './components/GalleryView/GalleryView';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout/>}>
       <Route path="home" element={<Home />} />
+      <Route path="gallery/:galleryId" element={<GalleryView />} />
+      <Route path="*" element={<Error />} />
     </Route>
   )
 );

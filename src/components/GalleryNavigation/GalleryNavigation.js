@@ -17,7 +17,7 @@ const GalleryNavigation = () =>{
     return(
         <header>
             <nav>
-                <NavLink to='home'>Home</NavLink>
+                <NavLink to='/'>Home</NavLink>
                 {allGalleries}
             </nav>
         </header>

@@ -7,3 +7,9 @@ nav {
     color: blue;
     text-decoration: none;
 }
+
+.nav__link:active{
+    font-weight: 900;
+    text-decoration: none;
+    color: red;
+}
