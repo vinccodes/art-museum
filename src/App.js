@@ -14,13 +14,19 @@ import {
 import RootLayout from './layouts/RootLayout';
 import Home from './pages/Home';
 import Error from './pages/Error';
-import GalleryView from './components/GalleryView/GalleryView';
+// Loaders
+import GalleryView, { galleryViewLoader } from './components/GalleryView/GalleryView';
+import GalleryNavigation from './components/GalleryNavigation/GalleryNavigation';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout/>}>
-      <Route path="home" element={<Home />} />
-      <Route path="gallery/:galleryId" element={<GalleryView />} />
+
+      <Route path="gallery" element={<Home />} />
+        <Route path=":galleryId" 
+               element={<GalleryView />}
+               loader={galleryViewLoader} />
+               
       <Route path="*" element={<Error />} />
     </Route>
   )
